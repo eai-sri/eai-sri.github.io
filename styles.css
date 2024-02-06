@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Vertical scrollbar for the entire page */
+}
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border: 2px solid #000; /* Border color */
+    border-radius: 50%; /* Make it circular */
+}
+
+.header-container {
+    text-align: center;
+}
+
+.header h1 {
+    font-family: "Arial", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    font-style: italic;
+}
+
+.contact-info .left {
+    float: left;
+}
+.contact-info .right {
+    float: right;
+}
+.contact-info .left, .right {
+    display: inline-block;
+    width: 50%;
+}
+
+.contact-info .left p {
+    font-weight: normal; /* Reset font weight for all paragraphs */
+}
+
+.contact-info .left p:first-child {
+    font-weight: bold; /* Apply bold font weight to the first paragraph */
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column; /* Display images vertically */
+    align-items: center;
+    width: 100%;
+    max-height: 80vh; /* Maximum height of the gallery */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 100%; /* Make the image fill the width of its container */
+    max-width: 400px; /* Maximum width of each image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Spacing between images */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.image:last-child {
+    margin-bottom: 0; /* Remove spacing from the last image */
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+
+/* Full screen modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999; /* Ensure the close icon is displayed on top */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow for elevation */
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto; /* Enable scrolling for larger images */
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
